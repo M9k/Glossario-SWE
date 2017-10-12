@@ -28,6 +28,8 @@
 			
 		\textbf{Processo}\\
 		\textit{Insieme di attività correlate} e \textit{coese} che trasformano ingressi (bisogni) in uscite (prodotti) secondo regole date, consumando risorse nel farlo\\
+		Correlate: hanno un motivo/una capacità per stare assieme\\
+		Coese: utili al medesimo obiettivo\\
 		
 		\textbf{Attività}\\
 		Cosa da fare per il raggiungimento degli obbiettivi, composta da più compiti\\
@@ -53,13 +55,45 @@
 		\textbf{Efficacia}\\
 		Qualità, metrica del grado di raggiungimento degli obbiettivi interni (del fornitore) o esterni (gradimento del cliente)\\
 		
+		\textbf{Iterazione}\\
+		Può essere anche un incremento, procedere per raffinamento o rivisitazioni (pittura)\\
+		Non so se sto migliorando o meno, non quantificabile, non efficiente, rifinisco gli aspetti senza magari avanzare, non so a che punto sono\\
+		
+		\textbf{Incremento}\\
+		Procedere per aggiunta a un impianto base (scultura)\\
+		Si progredisce a punti, a baseline, quantificabile\\
+		
+		\textbf{Prototipo}\\
+		Per provare e capire meglio, usa e getta (bozza), oppure per avere avanzamento incrementale (baseline)\\
+		
+		\textbf{Baseline}\\
+		Prototipo da utilizzare come base, come punto d'appoggio per le successive attività\\
+		
 		\textbf{Prodotto SW}\\
 		È un insieme di parti, che stanno assieme secondo la loro \textit{configurazione}.\\
-		Ogni sistema fatto di parti va gestito con il \textit{controllo di configurazione}.
+		Ogni sistema fatto di parti va gestito con il \textit{controllo di configurazione}.\\
 			
+		\textbf{Configurazione}\\
+		Modo nel quale si assemblano i pezzi di un software (ordine, parti, librerie, impostazioni, etc)\\
+		Usato per il build, si gestisce con il controllo di configurazione\\
 			
-			
-			
+		\textbf{Metrica}\\
+		Metodo di misurazione, l'unità di misura da sola è insignificante\\
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -137,82 +171,138 @@
 		\textbf{Modelli di ciclo di vita}\\
 		Descrivono come i processi di ciclo di vita si relazionano tra di loro rispetto agli stati\\
 		Aiutano a pianificare, organizzare ed eseguire lo svolgimento delle attività\\
+		Svariati, scelgo in base alla situazione, ognuno con pregi e limiti\\
 		
+		\textbf{Ciclo di sviluppo}\\
+		Ciclo di vita fino alla consegna, senza utilizzo, manutenzione e ritiro\\
 		
 		\textbf{Visione a grafi}\\
 		Gli stati sono i nodi (concezione, sviluppo, utilizzo, ritiro, etc), gli archi le attività svolte sul prodotto necessarie per farlo avanzare.\\
 		Natura degli stati e pre- e post- condizione determinate da \textit{obblighi} (vincoli contrattuali), \textit{regole} (standard di processo) e \textit{strategie}\\
 		
-		\subsubsection{Modelli di sviluppo}
-			\textbf{Modelli più significativi}\\
-			-Sequenziale o a cascata (waterfall)\\
-			-Incrementale\\
-			-A evoluzioni successive\\
-			-A spirale\\
-			-Per componenti\\
-			-Agile\\
+		\textbf{Modelli più significativi}\\
+		-Sequenziale o a cascata (waterfall)\\
+		-Incrementale\\
+		-A evoluzioni successive\\
+		-A spirale\\
+		-Per componenti\\
+		-Agile\\
 		
-			
-			\textbf{Iterazionale}\\
-			Procedere per raffinamento o rivisitazioni (pittura)\\
-			
-			\textbf{Incremento}\\
-			Procedere per aggiunta a un impianto base (scultura)\\
-			
-			\textbf{Prototipo}\\
-			Per provare e scegliere, usa e getta oppure avere avanzamento incrementale (baseline)\\
-			
-			\textbf{Riuso}\\
-			-Occasionale: copia-incolla, basso costo, scarso impatto\\
-			-Sistematico: per progetto/prodotto/azienda, maggior costo, maggior impatto\\
-			
-			
-			\textbf{Standard di processo}\\
-			Aiuta a raggiungere l'economicità, riferimento a ISO/IEC 12207:1995\\
-			Nascono per \textit{iniziativa del committente} per facilitare \textit{controllo}, \textit{collaudo} e \textit{accettazione}\\
-			
-			\textbf{Standard come modello di azione}\\
-			Definizione e imposizione di \textit{procedure}, definizione e proposizione di \textit{processi da specializzare}\\
-			
-			\textbf{Standard come modello di valutazione}\\
-			Modelli più generali, copre più contesti, per identificare best practice\\
+		\textbf{Riuso}\\
+		-Occasionale: copia-incolla, basso costo, scarso impatto, da evitare\\
+		-Sistematico: per progetto/prodotto/azienda, maggior costo, maggior impatto\\
 		
-			\textbf{ISO/IEC 12207:1995}\\
-			Più diffuso, ad alto livello\\
-			Identifica i processi di ciclo di vita del SW\\
-			Struttura modulare che richiede specializzazione\\
-			Specifica le responsabilità sui processi e i prodotti\\
+		\textbf{Malleabilità}\\
+		Un buon software non è statico, ma si modifica e si addatta in quanto usandolo si scoprono migliorie e/o cambiano gli usi\\
 			
-			\textbf{Processi primari}\\
-			Necessari per l'esistenza di un progetto\\
-			-Acquisizione (gestione dei sotto-fornitori)\\
-			-Fornitura (gestione rapporti con il cliente)\\
-			-Sviluppo\\
-			-Gestione operativa (utilizzo, erogazione, installazione)\\
-			-Manutenzione (correzione, adattamento, evoluzione)\\
-			
-			\textbf{Processi di supporto}\\
-			-Documentazione\\
-			-Accertamento qualità\\
-			-Gestione delle versioni e delle configurazioni\\
-			-Qualifica: verifica + validazione\\
-			-Revisioni congiunte con il cliente\\
-			-Verifiche ispettive interne\\
-			-Risoluzione dei problemi (gestione dei cambiamenti)\\
-			
-			\textbf{Processi organizzativi}\\
-			-Gestione dei processi\\
-			-Gestione delle infrastrutture\\
-			-Miglioramento del processo\\
-			-Formazione personale\\
-			
-			
-			\textbf{SONO ARRIVATO A SLIDE 22/36}\\
-			
-			
-			
-			
-			
+		\textbf{Processo}\\
+		\textit{Insieme di attività correlate} e \textit{coese} che trasformano ingressi (bisogni) in uscite (prodotti) secondo regole date, consumando risorse nel farlo\\
+		Correlate: hanno un motivo/una capacità per stare assieme\\
+		Coese: utili al medesimo obiettivo\\
+		\includegraphics[width=14cm]{processi.jpg}\\
+		Risorse: efficienza = produttività, cosa ho fatto/quante risorse ho utilizzato\\
+		Misurazione: efficacia, raggiungimento di obbiettivi interni (del fornitore, cioè di chi crea il software) o esterni (gradimento da parte del cliente)\\
+		
+		\textbf{Economicità}\\
+		Insieme di efficienza ed efficacia, da controllare DURANTE lo sviluppo usando:\\
+		-dati tempestivi (non si può attendere la fine, sarebbe troppo tardi)\\
+		-dati accurati (niente opinioni personali ma numeri)\\
+		-non intrusività (non bloccare il lavoro per controllare il progresso)\\
+		
+\textbf{-----------------------------------------------------------------------------------------------------------------------}\\
+\textbf{-----------------------------------------------------------------------------------------------------------------------}\\
+\textbf{-----------------------------------------------------------------------------------------------------------------------}\\
+		
+		
+		\textbf{Standard di processo}\\
+		Aiuta a raggiungere l'economicità, riferimento a ISO/IEC 12207:1995\\
+		Nascono per \textit{iniziativa del committente} per facilitare \textit{controllo}, \textit{collaudo} e \textit{accettazione}\\
+		
+		\textbf{Standard come modello di azione}\\
+		Definizione e imposizione di \textit{procedure}, definizione e proposizione di \textit{processi da specializzare}\\
+		
+		\textbf{Standard come modello di valutazione}\\
+		Modelli più generali, copre più contesti, per identificare best practice\\
+	
+		\textbf{ISO/IEC 12207:1995}\\
+		Più diffuso, ad alto livello\\
+		Identifica i processi di ciclo di vita del SW\\
+		Struttura modulare che richiede specializzazione\\
+		Specifica le responsabilità sui processi e i prodotti\\
+	
+		\textbf{Processi primari}\\
+		Necessari per l'esistenza di un progetto\\
+		-Acquisizione (gestione dei sotto-fornitori)\\
+		-Fornitura (gestione rapporti con il cliente)\\
+		-Sviluppo\\
+		-Gestione operativa (utilizzo, erogazione, installazione)\\
+		-Manutenzione (correzione, adattamento, evoluzione)\\
+		
+		\textbf{Processi di supporto}\\
+		-Documentazione\\
+		-Accertamento qualità\\
+		-Gestione delle versioni e delle configurazioni\\
+		-Qualifica: verifica + validazione\\
+		-Revisioni congiunte con il cliente\\
+		-Verifiche ispettive interne\\
+		-Risoluzione dei problemi (gestione dei cambiamenti)\\
+		
+		\textbf{Processi organizzativi}\\
+		-Gestione dei processi\\
+		-Gestione delle infrastrutture\\
+		-Miglioramento del processo\\
+		-Formazione personale\\
+		
+		\textbf{Tecniche}\\
+		Ricette per svolgere determinati compiti\\
+		Vincoli o strategie restringono il grado di libertà\\
+		
+		\textbf{Buona organizzazione}\\
+		Si basa sul riconoscere i processi, adottarli consapevolmente ed efficacemente e supportarli in modo efficiente\\
+		
+		
+		\textbf{Tipi di processo}\\
+		-Standard: di base, generico, condiviso tra aziende nello stesso dominio applicativo\\
+		-Definito: specializzazione per adeguare un processo standard a caratteristiche aziendali\\
+		-Di progetto: istanziato, usano risorse aziendali per raggiungere obbiettivi prefissati e con tempo limitato (progetti)\\
+		
+		\textbf{Processi specializzati/definiti}\\
+		-Chiari, stabili, documentati\\
+		-indipendenti dal modello di ciclo di vita adottato\\
+		-Indipendenti dalle tecnologie\\
+		-Indipendenti dal dominio applicativo\\
+		-Indipendenti dalla documentazione richiesta\\
+		
+		\textbf{Processi di progetto}\\
+		-Ben pianificati\\
+		-Chiare scelte di specializzazione (definire lo scenario, le attività e i compiti aggiuntivi e specifici, organizzare le relazione tra i processi specializzati)\\
+		-Massima attenzione nel condurre il progetto\\
+		-Valutazione critica dell'esito (formalizzare le parti che operano bene)\\
+		
+		\textbf{Dipendono da:}\\
+		-Dimensione del progetto\\
+		-Complessità del progetto\\
+		-Rischi identificati (da dominio applicativo e tecnologie)\\
+		-Competenze ed esperienza delle risorse umane\\
+		-Fattori dipendenti dal contratto\\
+		
+		\textbf{Organizzazione interna}\\
+		Principio del miglioramento continuo:\\
+		-Plan: definire attività, scadenze, responsabilità, risorse per raggiungere obbiettivi di miglioramento\\
+		-Do: eseguire secondo i piani\\
+		-Check: verificare l'esito delle azioni di miglioramento rispetto le attese\\
+		-Act: applicare soluzioni correttive alle carenze\\
+		
+		\textbf{Processi e modelli di ciclo di vita}\\
+		-La specifica dei processi non determina il modello di ciclo di vita\\
+		-Il livello di coinvolgimento del cliente determina natura, funzione e sequenza dei processi di revisione\\
+		-Quando il SW è parte di un sistema complesso il modello di ciclo di vita a \textit{livello di sistema} è spesso sequenziale.\\
+		
+		\textbf{Influenze sul modello di ciclo di vita}\\
+		-politiche di acquisizione e di sviluppo (versione unica o multipla, dipendenza da/verso altre componenti)\\
+		-Natura, funzione e sequenza dei processi di revisione (internet, esterne, non bloccanti)\\
+		-Necessità/utilità di fornire evidente preliminari di fattibilià (prototipi bozza o baseline, studi e analisi preliminari)\\
+		-Esigenza di iterazioni o di configurazioni (build, deployment)\\
 			
 			
 			
