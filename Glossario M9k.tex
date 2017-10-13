@@ -3,6 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[margin=0.5in]{geometry}
 \usepackage{graphicx}
+\usepackage{verbatim}
 
 \begin{document}
 
@@ -32,10 +33,10 @@
 		Coese: utili al medesimo obiettivo\\
 		
 		\textbf{Attività}\\
-		Cosa da fare per il raggiungimento degli obbiettivi, composta da più compiti\\
+		Cosa da fare, che voglio fare, per il raggiungimento degli obbiettivi, composta da più compiti\\
 		
 		\textbf{Compito}\\
-		Cosa che una persona deve fare\\
+		Cosa che una persona deve fare, che va fatta\\
 
 		\textbf{Processi, attività, tasks/compiti}\\
 		-Processo: attività correlate che trasformano i bisogni in prodotti, ed: sviluppo, documentazione, qualifica...\\
@@ -197,8 +198,8 @@
 			
 		\textbf{Processo}\\
 		\textit{Insieme di attività correlate} e \textit{coese} che trasformano ingressi (bisogni) in uscite (prodotti) secondo regole date, consumando risorse nel farlo\\
-		Correlate: hanno un motivo/una capacità per stare assieme\\
-		Coese: utili al medesimo obiettivo\\
+		Correlate: sono collegate, hanno la capacità di stare assieme\\
+		Coese: hanno un motivo di stare assieme\\
 		\includegraphics[width=14cm]{processi.jpg}\\
 		Risorse: efficienza = produttività, cosa ho fatto/quante risorse ho utilizzato\\
 		Misurazione: efficacia, raggiungimento di obbiettivi interni (del fornitore, cioè di chi crea il software) o esterni (gradimento da parte del cliente)\\
@@ -208,37 +209,40 @@
 		-dati tempestivi (non si può attendere la fine, sarebbe troppo tardi)\\
 		-dati accurati (niente opinioni personali ma numeri)\\
 		-non intrusività (non bloccare il lavoro per controllare il progresso)\\
-		
-\textbf{-----------------------------------------------------------------------------------------------------------------------}\\
-\textbf{-----------------------------------------------------------------------------------------------------------------------}\\
-\textbf{-----------------------------------------------------------------------------------------------------------------------}\\
-		
-		
+
 		\textbf{Standard di processo}\\
-		Aiuta a raggiungere l'economicità, riferimento a ISO/IEC 12207:1995\\
-		Nascono per \textit{iniziativa del committente} per facilitare \textit{controllo}, \textit{collaudo} e \textit{accettazione}\\
+		Voluti dai committenti per vincolare il fornitore\\
+		Per facilitare \textit{controllo}, \textit{collaudo} e \textit{accettazione}\\
+		Settoriali o generali/trasversali\\
+		Vincolo (imposto) o riferimento (non imposto, come modello)\\
 		
 		\textbf{Standard come modello di azione}\\
+		Sono una serie di passaggi da compiere, guida passo a passo, come una ricetta\\
 		Definizione e imposizione di \textit{procedure}, definizione e proposizione di \textit{processi da specializzare}\\
 		
 		\textbf{Standard come modello di valutazione}\\
+		Servono per avere una valutazione sul comportamento del progetto\\
 		Modelli più generali, copre più contesti, per identificare best practice\\
 	
 		\textbf{ISO/IEC 12207:1995}\\
-		Più diffuso, ad alto livello\\
+		Letta come 12 207\\
+		Più diffuso, ad alto livello, molto astratto, preso spunto dagli standard militari del dipartimento di difesa\\
 		Identifica i processi di ciclo di vita del SW\\
 		Struttura modulare che richiede specializzazione\\
 		Specifica le responsabilità sui processi e i prodotti\\
+		Tre parti principali: processi primari, di supporto e organizzativi\\
 	
 		\textbf{Processi primari}\\
 		Necessari per l'esistenza di un progetto\\
+		ES:\\
+		-Fornitura (gestione rapporti con il cliente, primo passo di un progetto)\\
 		-Acquisizione (gestione dei sotto-fornitori)\\
-		-Fornitura (gestione rapporti con il cliente)\\
 		-Sviluppo\\
 		-Gestione operativa (utilizzo, erogazione, installazione)\\
 		-Manutenzione (correzione, adattamento, evoluzione)\\
 		
 		\textbf{Processi di supporto}\\
+		ES:\\
 		-Documentazione\\
 		-Accertamento qualità\\
 		-Gestione delle versioni e delle configurazioni\\
@@ -248,6 +252,7 @@
 		-Risoluzione dei problemi (gestione dei cambiamenti)\\
 		
 		\textbf{Processi organizzativi}\\
+		ES:\\
 		-Gestione dei processi\\
 		-Gestione delle infrastrutture\\
 		-Miglioramento del processo\\
@@ -260,31 +265,32 @@
 		\textbf{Buona organizzazione}\\
 		Si basa sul riconoscere i processi, adottarli consapevolmente ed efficacemente e supportarli in modo efficiente\\
 		
-		
-		\textbf{Tipi di processo}\\
-		-Standard: di base, generico, condiviso tra aziende nello stesso dominio applicativo\\
-		-Definito: specializzazione per adeguare un processo standard a caratteristiche aziendali\\
-		-Di progetto: istanziato, usano risorse aziendali per raggiungere obbiettivi prefissati e con tempo limitato (progetti)\\
-		
-		\textbf{Processi specializzati/definiti}\\
-		-Chiari, stabili, documentati\\
-		-indipendenti dal modello di ciclo di vita adottato\\
-		-Indipendenti dalle tecnologie\\
-		-Indipendenti dal dominio applicativo\\
-		-Indipendenti dalla documentazione richiesta\\
-		
-		\textbf{Processi di progetto}\\
-		-Ben pianificati\\
-		-Chiare scelte di specializzazione (definire lo scenario, le attività e i compiti aggiuntivi e specifici, organizzare le relazione tra i processi specializzati)\\
-		-Massima attenzione nel condurre il progetto\\
-		-Valutazione critica dell'esito (formalizzare le parti che operano bene)\\
-		
-		\textbf{Dipendono da:}\\
-		-Dimensione del progetto\\
-		-Complessità del progetto\\
-		-Rischi identificati (da dominio applicativo e tecnologie)\\
-		-Competenze ed esperienza delle risorse umane\\
-		-Fattori dipendenti dal contratto\\
+		\begin{comment}
+			\textbf{Tipi di processo}\\
+			-Standard: di base, generico, condiviso tra aziende nello stesso dominio applicativo\\
+			-Definito: specializzazione per adeguare un processo standard a caratteristiche aziendali\\
+			-Di progetto: istanziato, usano risorse aziendali per raggiungere obbiettivi prefissati e con tempo limitato (progetti)\\
+			
+			\textbf{Processi specializzati/definiti}\\
+			-Chiari, stabili, documentati\\
+			-indipendenti dal modello di ciclo di vita adottato\\
+			-Indipendenti dalle tecnologie\\
+			-Indipendenti dal dominio applicativo\\
+			-Indipendenti dalla documentazione richiesta\\
+			
+			\textbf{Processi di progetto}\\
+			-Ben pianificati\\
+			-Chiare scelte di specializzazione (definire lo scenario, le attività e i compiti aggiuntivi e specifici, organizzare le relazione tra i processi specializzati)\\
+			-Massima attenzione nel condurre il progetto\\
+			-Valutazione critica dell'esito (formalizzare le parti che operano bene)\\
+			
+			\textbf{Dipendono da:}\\
+			-Dimensione del progetto\\
+			-Complessità del progetto\\
+			-Rischi identificati (da dominio applicativo e tecnologie)\\
+			-Competenze ed esperienza delle risorse umane\\
+			-Fattori dipendenti dal contratto\\
+		\end{comment}
 		
 		\textbf{Organizzazione interna}\\
 		Principio del miglioramento continuo:\\
