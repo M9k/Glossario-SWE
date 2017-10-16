@@ -159,7 +159,7 @@
 		
 		
 	\clearpage
-	\subsection{Processi SW}
+	\section{Processi SW}
 		\textbf{Ciclo di vita}\\
 		Gli stati che il prodotto assume dal concepimento al ritiro\\
 		Serve per valutare costi, tempi, obblighi e rischi PRIMA di svolgere il progetto\\
@@ -305,13 +305,98 @@
 		-Quando il SW è parte di un sistema complesso il modello di ciclo di vita a \textit{livello di sistema} è spesso sequenziale.\\
 		
 		\textbf{Influenze sul modello di ciclo di vita}\\
-		-politiche di acquisizione e di sviluppo (versione unica o multipla, dipendenza da/verso altre componenti)\\
+		-Politiche di acquisizione e di sviluppo (versione unica o multipla, dipendenza da/verso altre componenti)\\
 		-Natura, funzione e sequenza dei processi di revisione (internet, esterne, non bloccanti)\\
-		-Necessità/utilità di fornire evidente preliminari di fattibilià (prototipi bozza o baseline, studi e analisi preliminari)\\
+		-Necessità/utilità di fornire evidenze preliminari di fattibilià (prototipi bozza o baseline, studi e analisi preliminari)\\
 		-Esigenza di iterazioni o di configurazioni (build, deployment)\\
 			
 			
 			
 			
+	\clearpage
+	\section{Ciclo di vita}
+	
+		\textbf{Stati principali}\\
+		-Concezione\\
+		-Sviluppo\\
+		-Utilizzo\\
+		-Ritiro\\
+		
+		\textbf{Organizzare le attività di processo}\\
+		Si devono identificare dipendenze tra ingressi ed uscite, poi fissarle nel tempo assieme ai criteri di attivazione (pre-condizioni) e di completamento (post-condizioni)\\
+		
+		\textbf{Fase}\\
+		Stazionamento in uno stato del ciclo di vita o in una transizione tra stati\\
+		
+		\textbf{Sistema di qualità}\\
+		Associato al modello per assicurare conformità e maturità\\
+		
+		
+		\textbf{Modello a cascata o sequenziale}\\
+		Fasi:\\
+		-Analisi (requisiti di sistema e software, etc)\\
+		-Progettazione (Design, etc)\\
+		-Realizzazione (Codifica, integrazione, collaudo, etc)\\
+		-Manutenzione\\
+		Eseguite in modo rigidamente sequenziale, no parallelismo, guidato da documentazione, codice solo alla fine, con pre-condizioni e post-condizioni per ogni fase\\
+		Eccessiva rigidità, non permette modifiche ai requisiti, necessita di molta manutenzione, molto burocratico e poco realistico\\
+		Big-gan integration: si integra tutto alla fine in un solo colpo, se non funziona difficile isolare e correggere il problema\\
+		\textbf{Correzioni}\\
+		-Prototipazione: usa e getta, scrivendo la documentazione si fanno delle prove\\
+		-Cascata con ritorni: torno indietro per correggere/rifare una parte, rompendo il modello, iterazioni! -> Modello iterativo\\
+		
+		\textbf{Modello iterativo}\\
+		Applicabile a qualsiasi altro modello, consente l'adattamento (a evoluzione dei problemi, requisiti, soluzioni e tecnologie)\\
+		Si ritorna indietro rispetto l'asse temporale\\
+		
+		\textbf{Modello incrementale}\\
+		Fasi:\\
+		-Define outline requiments\\
+		-Assign requiments to increments (essenziale per poter procedere a incrementi)\\
+		-Design system architecture (come le parti si compongono, essenziale per il parallelismo)\\
+		finchè non ho il sistema finale:\\
+		|-Develop system increment\\
+		|-Validate increment\\
+		|-Integrate increment\\
+		|-Validate system\\
+		Possibile svolgere gli incrementi in parallelo\\
+		Riassumibile in : ``Analisi e progettazione'', poi ciclo su ``Progettazione di dettaglio'' e ``Implementazione dettaglio''\\
+		
+		\textbf{Modello evolutivo}\\
+		Per uno scenario che varia (es Browser), molteplici versioni intermedie, ogni fase ammette iterazioni multiple e parallele\\
+		
+		\textbf{Modello a componenti}\\
+		Si basa sul riutilizzo di componenti\\
+		Fasi:\\
+		-Analisi requisiti\\
+		-Analisi componenti\\
+		-Adattamento bisogni ai requisiti (controllo cosa fa al caso mio e come dovrò modificarlo per soddisfare i requisiti)\\
+		-Progettazione con riuso\\
+		-Sviluppo e integrazione\\
+		-Validazione di sistema\\
+		
+		\textbf{Modelli agili}\\
+		-Niente regole rigide\\
+		-Il software funzionante è più importante di una buona documentazione\\
+		-Collaborare con il cliente, non negoziare\\
+		-Essere reattivi, non mirare alla pianificazione\\
+		Ma:\\
+		-Adattare le regole è ok, ma bisogna mantenere un occhio su costi/benefici\\
+		-La mancanza della documentazione fa lievitare il costo di mantenimento\\
+		-Non pianificare significa non sapere se si sta avanzando e i rischi che si corrono\\
+		\textbf{User story}\\
+		Minuta, resoconto con il cliente, dialogando specifica i problemi e i requisiti, pezzo per pezzo\\
+		Sarà una lista di cose che vuole, che preferirebbe e che non vuole, da usare per controllare l'avanzamento e l'efficacia\\
+		\textbf{3 forme principali}\\
+		La maggiore: \textbf{SCRUMB}\\
+		Iterazione controllata, c'è un \textit{backlog} di cose da svolgere, si sceglie quali fare (\textit{sprint}) prendendo le più utili/necessarie/importanti, le faccio, le unisco in un incremento e itero nuovamente\\
+		Sprint usualmente di circa 2 settimane, con misurazioni giornaliere brevi di tipo stand-up, intrusive!\\
+		
+		\textbf{Il ciclo di vita secondo SEMAT}\\
+		Utilizzo di checklist comuni per controllare l'avanzamento e l'aver completato le principali problematiche dei vari ambiti (opportunità, stakeholder, requisiti, sistema software, team, lavoro e way-of-working)\\
+		
+		
+	\clearpage
+	\section{Nuovo argomento}
 	
 \end{document}
