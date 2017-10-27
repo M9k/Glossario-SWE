@@ -81,12 +81,15 @@
 		1 - Condizione (capability) da chi la offre - capacità di risolvere un problema o raggiungere un obbiettivo\\
 		2 - Condizione (capability) da chi la richiede - che deve essere soddisfatta o posseduta da un sistema per aderire a un obbligo (contratto, standard, specifica, documento formale)\\
 		3 - Descrizione documentata di una condizione come in 1 o 2\\
+		Importante siano atomici, misurabili, assegnabili a una attività, tracciabile e con un ID univoco e sensato\\
 		
 		\textbf{Qualifica}\\
 		Verifica + Validazione\\
 		\textit{Verifica}: processo di supporto, accertamento che l'esecuzione delle attività non abbia introdotto errori, rivolto ai processi, da fare per OGNI componente\\
 		Per la verifica serve piano di verifica che si basa sul way of working\\
+		Verifica che il codice sia verificato secondo progettazione che soddisfa requisiti\\
 		\textit{Validazione}: controllo rivolto SOLO al prodotto finale, lungo e costoso, accertarsi che il prodotto realizzato corrisponda alle attese\\
+		Abilitato dalle verifiche, accerta che il codice confermi i requisiti\\
 		
 		
 		
@@ -554,16 +557,15 @@
 		1 - Condizione (capability) da chi la offre - capacità di risolvere un problema o raggiungere un obbiettivo\\
 		2 - Condizione (capability) da chi la richiede - che deve essere soddisfatta o posseduta da un sistema per aderire a un obbligo (contratto, standard, specifica, documento formale)\\
 		3 - Descrizione documentata di una condizione come in 1 o 2\\
+		Importante siano atomici, misurabili, assegnabili a una attività, tracciabile e con un ID univoco e sensato\\
 		
 		\textbf{Qualifica}\\
 		Verifica + Validazione\\
 		\textit{Verifica}: processo di supporto, accertamento che l'esecuzione delle attività non abbia introdotto errori, rivolto ai processi, da fare per OGNI componente\\
 		Per la verifica serve piano di verifica che si basa sul way of working\\
+		Verifica che il codice sia verificato secondo progettazione che soddisfa requisiti\\
 		\textit{Validazione}: controllo rivolto SOLO al prodotto finale, lungo e costoso, accertarsi che il prodotto realizzato corrisponda alle attese\\
-		
-		
-		
-		
+		Abilitato dalle verifiche, accerta che il codice confermi i requisiti\\
 		
 		\textbf{Analisi}\\
 		-Studio dei bisogni e delle fonti del dominio applicativo\\
@@ -590,16 +592,14 @@
 		-Modellazione concettuale del sistema\\
 		|-Partizionamento in componenti per l'allocazione dei requisiti, con diagramma dei casi d'uso (analisi - cosa, non il come)\\
 		-Ripartizione dei requisiti a parti del sistema\\
-		%-----------------
 		-Accertarsi della soddisfacibilità dei requisiti\\
 		-Assicurarsi che i requisiti concordati siano solo e tutti quelli necessari e sufficienti\\
 		-Determinare con il cliente l'utilità strategica\\
-		%-----------------
 		
 		\textbf{Documentazione - processo di supporto}\\
 		-Definizione dei bisogni (utente - contrattuali, il cosa e SW - il come)\\
-		Analisi di fattibilità - del fornitore, riservato\\
-		Analisi dei requisiti - documento contrattuale\\
+		Analisi di fattibilità - del fornitore, riservato, da fare velocemente per considerare se partecipare all'appalto\\
+		Analisi dei requisiti - documento contrattuale, sostituisce il capitolato\\
 		
 		\textbf{Gestione del prodotto - processo di supporto}\\
 		-Tracciamento requisiti (sapere da che esigenza arrivano)\\
@@ -608,55 +608,75 @@
 		\includegraphics[width=10cm]{verifica.jpg}\\
 		\includegraphics[width=10cm]{analisi_progettazione.jpg}\\
 		
-		%?---------------------------------------------------------------------??
-		%?---------------------------------------------------------------------??
-		%?---------------------------------------------------------------------??
-		%?---------------------------------------------------------------------??
 		\textbf{Approccio funzionale}\\
-		-Studio di fattibilità porta ad analisi dei requisiti in linguaggio naturale + supporto di linguaggi formali o semi-formali (diagramma dei casi d'uso)\\
-		-Specifica tecnica in linguaggi formali, definizione di funzione e profilo operazionale\\
-		-Top-down - programmazione procedurale\\
+		Penso all'obbiettivo, lo divido in parti e sottoparti, decomposizione, istintivo ma scomodo\\
+		Top-down - programmazione procedurale\\
 		
 		\textbf{Approccio object-oriented}\\
-		-Studio di fattibilità porta ad analisi dei requisiti in formalismi grafici (diagramma dei casi d'uso)\\
-		-Continuità logica con la progettazione mediante le classi\\
-		-Bottom-up, aggregazione di parti, design pattern e riutilizzo, programmazione ad oggetti\\
+		Inizio dal generico astratto e specializzo estendendo, permesso dalle interfacce, i problemi li correggo solo una volta in alto, favorisce riutilizzo\\
+		Analisi dei requisiti in formalismi grafici (diagramma dei casi d'uso)\\
+		Bottom-up, aggregazione di parti, design pattern e riutilizzo, programmazione ad oggetti\\
 		
-		%\textbf{Approccio con modello agile}\\
-		%???
+		\textbf{Approccio con modello agile}\\
+		Si deve continuare a ciclare l'analisi per rifinire i requisiti e quindi il backlog\\
 		
-		\textbf{Studio di fattibilità}\\
-		-Valutare rischi, costi e benefici dal punto di vista di fornitore e cliente\\
-		-Decidere se procedere o meno con le conoscenze disponibili o con un piano di formazione sostenibile\\
-		
-		\textbf{Fattibilità tecnico-organizzativa}\\
-		Disponibilità di tecnologie, soluzioni algoritmiche e architetturali possibili, piattaforme idonee per l'esecuzione\\
-		-Rapporto costi benefici:\\
-		Confrontare il mercato attuale e quello futuro, valutare costo e redditività\\
+		\textbf{Decidere o meno di proseguire}\\
+		-Rapporto costi benefici (nel mercato attuale e quello futuro)\\
 		-Individuare rischi (complessità e incertezze)\\
-		-Valutazione delle scadenze temporali - disponibilità delle risorse necessarie\\
+		-Fattibilità (tecnologiche, conoscenza, formazione)\\
+		-Valutazione delle scadenze temporali\\
 		-Valutare alternative:\\
 		|-Scelte architetturali come sistema decentralizzato, client-server, etc)\\
 		|-Strategie realizzative: riuso o sviluppo da zero\\
 		|-Strategie operative: Avvio, esercizio, manutenzione del sistema e formazione utenti\\
 		
+		\textbf{Analisi dei requisiti - metodologie}\\
+		-Mi pongo nei panni del cliente, per capire le cose implicite secondo lui\\
+		-Interagisco con il cliente/committente, interviste, poi faccio minuta di riunione (forma sintetica) approvata da entrambe le parti\\
+		-Brainstorming, idee senza ordine, in modo creativo (necessito di qualcuno che scriva e qualcuno che regoli)\\
+		-Prototipazione interna o esterna, da discutere con il cliente\\
 		
 		\textbf{Classificazione dei requisiti}\\
-		Mettere ordine nei requisiti facilita la comprensione, manutenzione e tracciamento\\
-		Attributi del prodotto:\\
-		-Caratteristiche richieste al sistema, cosa devo fare? requisiti funzionali, prestazionali e di qualità\\
-		-Vincoli sui processi impiegati, come defo farlo? requisiti di vincolo realizzativo, normativo o contrattuale\\
-		I requisiti devono essere verificabili:\\
-		-requisiti funzionali: test, dimostrazione formale o revisione\\
-		-requisiti prestazionali: misurazione\\
-		-requisiti qualitativi: verifica ad hoc\\
-		-requisiti dichiarativi (vincoli): revisione\\
-				
-		\textbf{Utilità strategica dei requisiti}\\
+		Per fare ordine, per poterli ritrovare e per essere sicuri di non saltarne una parte\\
+		-\textit{Requisi/attributi del prodotto}: cosa devo fare\\
+		-\textit{Requisi/attributi di processo}: come devo fare, way of working, chi paga può deciderlo\\
+		
+		\textbf{Esempio di classificazione dei requisiti}\\
+		\includegraphics[width=10cm]{classificazione_requisiti.jpg}\\
+		
+		
+		\textbf{Classificazione per utilità strategica dei requisiti}\\
 		-Obbligatori: irrinunciabili\\
 		-Desiderabili: con valore aggiuntivo riconoscibile\\
 		-Opzionali: relativamente utili o contrattabili più avanti\\
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		----------------------------------------------------------------------------------------------------------------
+		\\-
+		\\-
+		\\-
+		\\-
+		\\-
+		\\-
+		\\-
+		\\-
+		\\-
+		\\-
+		\\-
+		\\-
 		\textbf{Specifica del progetto - secondo IEEE 830-1998}\\
 		Deve essere:\\
 		-Priva di ambiguità\\
@@ -689,7 +709,7 @@
 		Progettazione influenzabile da esigenza o opportunità di riuso di:\\
 		-componenti aziendali preesistenti\\
 		-componenti commerciali\\
-		.componenti imposte dal cliente\\
+		-componenti imposte dal cliente\\
 		
 		\textbf{Stati di progresso per SEMAT} 
 		-Conceived: il committente è identificato e gli stakeholder vedono una opportunità per il progetto\\
@@ -699,6 +719,7 @@
 		-Addressed: Il prodotto soddisfa i principali requisiti, possibile il rilascio e l'uso\\
 		-Fulfilled: Il prodotto soddisfa abbastanza requisiti da avere la piena approvazione degli stakeholder\\
 		
+		%-----------
 		
 		
 \end{document}
