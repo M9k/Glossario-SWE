@@ -650,27 +650,8 @@
 		-Opzionali: relativamente utili o contrattabili più avanti\\
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		%--------------------------------------------------------------------------------
 		----------------------------------------------------------------------------------------------------------------
-		\\-
-		\\-
-		\\-
-		\\-
-		\\-
-		\\-
-		\\-
 		\\-
 		\\-
 		\\-
@@ -718,7 +699,119 @@
 		-Addressed: Il prodotto soddisfa i principali requisiti, possibile il rilascio e l'uso\\
 		-Fulfilled: Il prodotto soddisfa abbastanza requisiti da avere la piena approvazione degli stakeholder\\
 		
-		%-----------
 		
+		%--------------------------------------------------------------------------------
+		
+		
+		
+		
+		
+	\clearpage
+	\section{Progettazione}
+		\textbf{Progettazione}\\
+		Correttezza per costruzione, non per correzione, usa divide-et-impera per gestire complessità e ripartire le responsabilità, per produrre con efficienza ed efficacia\\
+		Approccio sintetico, per capire come fare una soluzione soddisfacente per gli stakeholder\\
+		Input: i requisiti del problema\\
+		Prodotti: documentazione sull'architettura e i suoi modelli logici, aka la soluzione del problema\\
+		
+		\textbf{Obbiettivi della progettazione}\\
+		-Soddisfare i requisiti con un sistema di qualità\\
+		-Definire l'architettura logica del prodotto (parti chiare e coese, realizzabile con risorse sostenibili e costi fissati, mantenibile)\\
+		-Identificare soluzioni architetturali utili e parti riutilizzabili\\
+		-Dominare la complessità suddividendo, finché una parte non è codificabile velocemente e verificabile da una persona\\
+		-Non troppo dettagliata, o costo di coordinamento supera il beneficio, più minute le parti e più difficile integrarle\\
+		
+		\textbf{Architettura - da ISO/IEC/IEEE 42010}\\
+		-La decomposizione del sistema in componenti\\
+		-L'organizzazione di tali componenti, definendo ruoli, responsabilità e iterazioni (chi fa cosa e come)\\
+		-Le interfacce necessarie all'interazione delle componenti\\
+		-I paradigmi di composizione, con regole, criteri, limiti e vincoli\\
+		
+		Esistono più stili, aderendo a uno si garantisce coerenza e consistenza\\
+		
+		\textbf{Qualità di una buona architettura}\\
+		-Sufficienza: capacità di soddisfare i requisti\\
+		-Comprensibilità: anche per gli stakeholder\\
+		-Modularità: suddivisa in parti chiare e ben distinte\\
+		-Robustezza: supporto di diversi ingressi, anche errati e multipli, dell'utente e dell'ambiente\\
+		-Flessibilità: permette modifiche a costo contenuto al variare dei requisiti\\
+		-Riusabilità: se sue parti possono essere usate in altre applicazioni\\
+		-Efficienza: nel tempo, spazio e comunicazioni\\
+		-Affidabilità: altamente probabile che svolga bene il suo compito quando utilizzata\\
+		-Disponibilità: la manutenzione di una parte non deve bloccare tutto il sistema a lungo (o non farlo)\\
+		-Sicurezza rispetto a malfunzionamenti: grado di ridondanza\\
+		-Sicurezza rispetto a intrusioni\\
+		-Semplicità: ogni parte ha il necessario e niente di superfluo, semplice ma non semplificato\\
+		-Incapsulazione (information hiding): L'interno non è visibile dall'esterno, solo l'interfaccia visibile, migliora manutenibilità, riutilizzo ed impedisce assunzioni sull'interno\\
+		-Coesione: le parti che stanno assieme hanno lo stesso obbiettivo (VEDERE SOTTO)\\
+		-Basso accoppiamento: le parti distinte dipendono poco o nulla tra di loro (VEDERE SOTTO)\\
+		
+		\textbf{Qualità: Coesione}\\
+		Proprietà interna di singole componenti, funzionalità vicine devono stare assieme nella componente\\
+		La modularità decompone il grande in piccolo, la coesione fornisce un criterio di decomposizione e anche un limite inferiore\\
+		Massimizzata per ottenere maggiore manutenibilità e riusabilità, minore interdipendenza tra le componenti, maggiore comprensibilità dell'architettura\\
+		Tipologie:\\
+		-Funzionale: le parti concorrono allo stesso scopo\\
+		-Sequenziale: le parti sono vicine come ordine di esecuzione\\
+		-Informativa: le parti agiscono sulle stesse informazioni\\
+		Migliore quella che usa information hiding\\
+		
+		\textbf{Qualità: Accoppiamento}\\
+		Parti diverse possono essere dipendenti tra di loro in modo errato\\
+		MAI basarsi su assunzioni dell'interno di altre classi, non imporre vincoli dall'esterno verso l'interno di altre parti, condividere frammenti delle stesse risorse/dati\\
+		
+		Accoppiamento necessario, se le parti non comunicano non è un sistema, ma da tenere basso\\
+		Metriche: M componenti, U grado di utilizzo reciproco\\
+		U minimo insieme vuoto, massimo M x M\\
+		\textit{SFIN} = Fan-IN Strutturale = indice di utilità, quante volte una componente è utilizzata, da massimizzare\\
+		\textit{SFOUT} = Fan-OUT Strutturale = indice di dipendenza, quante componenti viene utilizzata dalla mia, da minimizzare\\
+		
+		\textbf{Progettazione architetturale}\\
+		Di tre tipi:\\
+		-top-down, stile funzionale, decomposizione dei problemi\\
+		-bottom-up, orientato agli oggetti, composizione e specializzazione\\
+		-meet-in-the-middle, intermedio, più usato\\
+		
+		\textbf{Framework}\\
+		Insieme integrato di componenti SW prefabbricate\\
+		Definite ''librerie'' prima della programmazione ad oggetti\\
+		Sono bottom-up, perchè si usa codice già sviluppato (composizione e specializzazione), ma possono essere anche top-down se impongono uno stile architetturale (come scomporre il problema)\\
+		
+		\textbf{Design pattern architetturali}\\
+		Soluzione progettuale a problema ricorrente, organizza una responsabilità architetturale lasciando alcune libertà\\
+		
+		\textbf{Pattern architetturali}\\
+		-Architettura three-tier, a livelli\\
+		GUI, logica operativa (business logic) e organizzazione dei dati (DBMS)\\
+		-Architettura multilivello\\
+		Come OSI e TPC/IP\\
+		-Architettura produttore-consumatore\\
+		Collaborazione su pipeline\\
+		
+		\textbf{Progettazione di dettaglio}\\
+		Attività:\\
+		-definizioni dei moduli/unità realizzative: realizzabili da un singolo programmatore, corrisponde a funzionalità o responsabilità ben definita\\
+		-Specifica delle unità come insieme di moduli: dipende dal linguaggio di programmazione, deve essere la minore entità strutturale utilmente rappresentabile\\
+		-ex-novo oppure tramite specializzazioni di entità esistenti\\
+		Obbiettivi:\\
+		-Le unità dell'architettura di dettaglio realizzano le componenti dell'architettura logica\\
+		-Produrre la documentazione necessaria alla specifica i ogni unità\\
+		-Definire gli strumenti per le prove di unità\\
+		
+		\textbf{Documentazione, secondo IEEE 1016}\\
+		-Introduzione\\
+		-Riferimenti normativi e informativi\\
+		-Descrizione della decomposizione architetturale (componenti, processi, dati)\\
+		-Descrizione delle dipendenze (tra componenti, processi, dati)\\
+		-Descrizione delle interfacce (tra componenti, processi, dati)\\
+		-Descrizione della progettazione di dettaglio\\
+		
+		\textbf{Stati di progresso secondo SEMAT}\\
+		-Architecture selected: selezionata una architettura adatta e le tecnologie necessarie, decisi buy, build e make\\
+		-Demostrable: Dimostrazione delle principali caratteristiche, approvate da stakeholder, decisione interfacce e configurazione\\
+		-Usable: sistema utilizzabile e ha le caratteristiche desiderabili, funzionalita e prestazioni verificate e validate, quantità difetti residui accettabile\\
+		-Ready: documentazione utente pronta, gli stakeholder hanno accettato il prodotto\\
+		
+	%%%% TODO: Riportare termini completi nel glossario
 		
 \end{document}
