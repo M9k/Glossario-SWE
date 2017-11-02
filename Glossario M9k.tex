@@ -91,9 +91,19 @@
 		\textit{Validazione}: controllo rivolto SOLO al prodotto finale, lungo e costoso, accertarsi che il prodotto realizzato corrisponda alle attese\\
 		Abilitato dalle verifiche, accerta che il codice confermi i requisiti\\
 		
+		\textbf{Progettazione}\\
+		Correttezza per costruzione, non per correzione, usa divide-et-impera per gestire complessità e ripartire le responsabilità, per produrre con efficienza ed efficacia\\
+		Approccio sintetico, per capire come fare UNA soluzione (di tante possibili) soddisfacente per gli stakeholder e sufficientemente efficiente\\
 		
+		\textbf{Architettura - da ISO/IEC/IEEE 42010}\\
+		-La decomposizione del sistema in componenti\\
+		-L'organizzazione di tali componenti, definendo ruoli, responsabilità e iterazioni (chi fa cosa e come)\\
+		-Le interfacce (regole strutturate) necessarie all'interazione delle componenti\\
+		-I paradigmi (modo esemplare) di composizione, per fare il meglio con meno risorse possibili\\
 		
+		\textbf{Sistema}: aggregato di parti per un fine comune\\
 		
+		\textbf{Componenti}: parte di un sistema abbastanza grande da avere un ruolo specifico\\
 		
 		
 		
@@ -649,14 +659,6 @@
 		-Desiderabili: con valore aggiuntivo riconoscibile\\
 		-Opzionali: relativamente utili o contrattabili più avanti\\
 		
-		
-		%--------------------------------------------------------------------------------
-		----------------------------------------------------------------------------------------------------------------
-		\\-
-		\\-
-		\\-
-		\\-
-		\\-
 		\textbf{Specifica del progetto - secondo IEEE 830-1998}\\
 		Deve essere:\\
 		-Priva di ambiguità\\
@@ -674,16 +676,16 @@
 		-Specifica requisiti (definizione requisiti utente e di sistema, prima composizione del sistema, evoluzione attesa del sistema)\\
 		-Eventuali appendici\\
 		
-		\textbf{Verifica dei requisiti}\\
-		Eseguita su un documento organizzato, tramite:\\
-		-Walkthrought: lettura a largo spettro\\
-		-Ispezione: lettura mirata e strutturata\\
-		Matrice delle dipendente (necessità e sufficienze) per tracciare\\
-		Ricercando chiarezza espressiva, strutturale (separare requisiti funzionali e non) ed atomicità e aggregazione (requisiti elementari, correlazioni chiare)\\
+		Scritta in formato formale o semi-formale, con diagrammi e formule, ricercando chiarezza espressiva, strutturale (separare requisiti funzionali e non) ed atomicità e aggregazione (requisiti elementari, correlazioni chiare)\\
 		
-		Identificazione e classificazione, con ID, numerazione di sequenza o coppie -categoria, numero-\\
-		Gestire i cambiamenti valutandone l'impatto e la fattibilità tecnica\\
-		Necessità di tracciare\\
+		\textbf{Verifica dei requisiti}\\
+		Eseguita su un documento organizzato, non posso eseguire test pratici essendo documentazione, tramite due approcci:\\
+		-Walkthrought: si controlla tutto, non so dove sono i problemi e come identificarli, lenta e costosa\\
+		-Ispezione: ho una checklist di indicatori di possibili problemi, scorro il documento, se ne rilevo approfondisco il controllo, più veloce\\
+		
+		\textbf{Classificazione}\\
+		Con ID risulta scomodo, usare numerazione gerarchica sequenziale basato sulla struttura del documento (es 2.7.2) o coppie -categoria, numero-\\
+		Classificati con strumenti, NON a mano, per mantenere automatico il propagarsi dei cambiamenti tra requisito, parte della specifica e componente del sistema\\
 		
 		\textbf{Riuso}\\
 		Progettazione influenzabile da esigenza o opportunità di riuso di:\\
@@ -691,18 +693,13 @@
 		-componenti commerciali\\
 		-componenti imposte dal cliente\\
 		
-		\textbf{Stati di progresso per SEMAT} \\
-		-Conceived: il committente è identificato e gli stakeholder vedono una opportunità per il progetto\\
-		-Bounded: I bisogni macro sono chiari, meccanismi di gestione dei requisiti fissati (configurazione e cambiamento)\\
-		-Coherent: I requisiti sono classificati, quelli essenziali sono chiari e ben definiti\\
-		-Acceptable: I requisiti fissati definiscono un sistema soddisfacente per gli stakeholder\\
-		-Addressed: Il prodotto soddisfa i principali requisiti, possibile il rilascio e l'uso\\
-		-Fulfilled: Il prodotto soddisfa abbastanza requisiti da avere la piena approvazione degli stakeholder\\
-		
-		
-		%--------------------------------------------------------------------------------
-		
-		
+		\textbf{Milestone per l'analisi dei requisiti secondo SEMAT} \\
+		-\textbf{Conceived}: committente e stakeholder hanno la necessità di avere un prodotto SW, hanno un bisogno\\
+		-\textbf{Bounded}: Il fornitore fissa i bisogni macro e i meccanismi di gestione dei requisiti\\
+		-\textbf{Coherent}: Il fornitore ha classificato i requisiti, quelli essenziali sono chiari e ben definiti\\
+		-\textbf{Acceptable}: I requisiti fissati definiscono un sistema soddisfacente per gli stakeholder (il fornitore chiede e ha l'approvazione)\\
+		-\textbf{Addressed}: Secondo il fornitore il prodotto soddisfa i principali requisiti, possibile il rilascio e l'uso\\
+		-\textbf{Fulfilled}: Gli stakeholder confermano che il prodotto soddisfa abbastanza requisiti da avere la piena approvazione\\
 		
 		
 		
@@ -710,30 +707,37 @@
 	\section{Progettazione}
 		\textbf{Progettazione}\\
 		Correttezza per costruzione, non per correzione, usa divide-et-impera per gestire complessità e ripartire le responsabilità, per produrre con efficienza ed efficacia\\
-		Approccio sintetico, per capire come fare una soluzione soddisfacente per gli stakeholder\\
-		Input: i requisiti del problema\\
-		Prodotti: documentazione sull'architettura e i suoi modelli logici, aka la soluzione del problema\\
+		Approccio sintetico, per capire come fare UNA soluzione (di tante possibili) soddisfacente per gli stakeholder e sufficientemente efficiente\\
+		Input: i requisiti da analisi dei requisiti, che ha adottato un approccio investigativo, con il massimo approfondimento possibile\\
+		Prodotti: documentazione sull'architettura e i suoi modelli logici, definendo l'architettura\\
 		
-		\textbf{Obbiettivi della progettazione}\\
-		-Soddisfare i requisiti con un sistema di qualità\\
-		-Definire l'architettura logica del prodotto (parti chiare e coese, realizzabile con risorse sostenibili e costi fissati, mantenibile)\\
-		-Identificare soluzioni architetturali utili e parti riutilizzabili\\
-		-Dominare la complessità suddividendo, finché una parte non è codificabile velocemente e verificabile da una persona\\
-		-Non troppo dettagliata, o costo di coordinamento supera il beneficio, più minute le parti e più difficile integrarle\\
+		\textbf{Responsabilità - secondo Dijkstra}\\
+		-Analisi dei requisiti: Definire le proprietà/requisiti in modo da soddisfare le necessità\\
+		-Progettazione: Garantire una soluzione economica che ha i requisiti individuati\\
+		-Codifica: Produrre il SW secondo la progettazione\\
 		
 		\textbf{Architettura - da ISO/IEC/IEEE 42010}\\
 		-La decomposizione del sistema in componenti\\
 		-L'organizzazione di tali componenti, definendo ruoli, responsabilità e iterazioni (chi fa cosa e come)\\
-		-Le interfacce necessarie all'interazione delle componenti\\
-		-I paradigmi di composizione, con regole, criteri, limiti e vincoli\\
+		-Le interfacce (regole strutturate) necessarie all'interazione delle componenti\\
+		-I paradigmi (modo esemplare) di composizione, per fare il meglio con meno risorse possibili\\
+		
+		\textit{Sistema}: aggregato di parti per un fine comune\\
+		\textit{Componenti}: parte di un sistema abbastanza grande da avere un ruolo specifico\\
 		
 		Esistono più stili, aderendo a uno si garantisce coerenza e consistenza\\
 		
 		\textbf{Qualità di una buona architettura}\\
-		-Sufficienza: capacità di soddisfare i requisti\\
-		-Comprensibilità: anche per gli stakeholder\\
-		-Modularità: suddivisa in parti chiare e ben distinte\\
-		-Robustezza: supporto di diversi ingressi, anche errati e multipli, dell'utente e dell'ambiente\\
+		-Sufficienza: capacità di soddisfare TUTTI i requisti\\
+		-Comprensibilità: anche per gli stakeholder, per dimostrare gli avanzamenti\\
+		-Modularità: suddivisa in parti chiare e ben distinte secondo un criterio, ci sono due strade per farlo:\\
+		|-Suddividere in blocchi logici\\
+		|-Information hiding - in caso di cambiamenti ci sono meno perturbazioni interne\\
+		-Robustezza: supporto ad errori dell'utente e dell'ambiente\\
+		
+		------------------------------------------------------------------------------------------
+		\\
+		
 		-Flessibilità: permette modifiche a costo contenuto al variare dei requisiti\\
 		-Riusabilità: se sue parti possono essere usate in altre applicazioni\\
 		-Efficienza: nel tempo, spazio e comunicazioni\\
@@ -810,8 +814,7 @@
 		-Architecture selected: selezionata una architettura adatta e le tecnologie necessarie, decisi buy, build e make\\
 		-Demostrable: Dimostrazione delle principali caratteristiche, approvate da stakeholder, decisione interfacce e configurazione\\
 		-Usable: sistema utilizzabile e ha le caratteristiche desiderabili, funzionalita e prestazioni verificate e validate, quantità difetti residui accettabile\\
-		-Ready: documentazione utente pronta, gli stakeholder hanno accettato il prodotto\\
+		-Ready: documentazione utente pronta, gli stakeholder hanno accettato il prodotto
 		
-	%%%% TODO: Riportare termini completi nel glossario
 		
 \end{document}
