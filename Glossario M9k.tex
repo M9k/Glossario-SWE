@@ -105,8 +105,23 @@
 		
 		\textbf{Componenti}: parte di un sistema abbastanza grande da avere un ruolo specifico\\
 		
+		\textbf{Framework}\\
+		Insieme integrato di componenti SW prefabbricate, librerie architetturali, architettura generica riusabile con buone proprietà\\
+		Definite ''librerie'' prima della programmazione ad oggetti\\
+		Sono bottom-up, perchè si usa codice già sviluppato (composizione e specializzazione), ma possono essere anche top-down se impongono uno stile architetturale (come scomporre il problema)\\
+		Utilizzano design pattern ricorrenti\\
 		
+		\textbf{Design pattern architetturali}\\
+		Soluzione progettuale a problema ricorrente, organizza una responsabilità architetturale lasciando alcune libertà\\
 		
+		\textbf{Unità}\\
+		?\\
+		
+		\textbf{Moduli}\\
+		?\\
+		
+		\textbf{Prove di unità}\\
+		?\\
 		
 		
 		
@@ -734,36 +749,22 @@
 		|-Suddividere in blocchi logici\\
 		|-Information hiding - in caso di cambiamenti ci sono meno perturbazioni interne\\
 		-Robustezza: supporto ad errori dell'utente e dell'ambiente\\
-		
-		------------------------------------------------------------------------------------------
-		\\
-		
 		-Flessibilità: permette modifiche a costo contenuto al variare dei requisiti\\
 		-Riusabilità: se sue parti possono essere usate in altre applicazioni\\
 		-Efficienza: nel tempo, spazio e comunicazioni\\
-		-Affidabilità: altamente probabile che svolga bene il suo compito quando utilizzata\\
+		-Affidabilità: altamente probabile che svolga bene il suo compito quando utilizzata, non si blocca se qualcosa fallisce\\
 		-Disponibilità: la manutenzione di una parte non deve bloccare tutto il sistema a lungo (o non farlo)\\
 		-Sicurezza rispetto a malfunzionamenti: grado di ridondanza\\
 		-Sicurezza rispetto a intrusioni\\
 		-Semplicità: ogni parte ha il necessario e niente di superfluo, semplice ma non semplificato\\
 		-Incapsulazione (information hiding): L'interno non è visibile dall'esterno, solo l'interfaccia visibile, migliora manutenibilità, riutilizzo ed impedisce assunzioni sull'interno\\
-		-Coesione: le parti che stanno assieme hanno lo stesso obbiettivo (VEDERE SOTTO)\\
+		-Coesione: le parti che stanno assieme hanno lo stesso obbiettivo, motivo, ruolo\\
+		|-Secondo diverse categorizzazioni (funzionale, sequenziale, informativa, etc), migliore quella che predilige information hiding\\
 		-Basso accoppiamento: le parti distinte dipendono poco o nulla tra di loro (VEDERE SOTTO)\\
-		
-		\textbf{Qualità: Coesione}\\
-		Proprietà interna di singole componenti, funzionalità vicine devono stare assieme nella componente\\
-		La modularità decompone il grande in piccolo, la coesione fornisce un criterio di decomposizione e anche un limite inferiore\\
-		Massimizzata per ottenere maggiore manutenibilità e riusabilità, minore interdipendenza tra le componenti, maggiore comprensibilità dell'architettura\\
-		Tipologie:\\
-		-Funzionale: le parti concorrono allo stesso scopo\\
-		-Sequenziale: le parti sono vicine come ordine di esecuzione\\
-		-Informativa: le parti agiscono sulle stesse informazioni\\
-		Migliore quella che usa information hiding\\
 		
 		\textbf{Qualità: Accoppiamento}\\
 		Parti diverse possono essere dipendenti tra di loro in modo errato\\
 		MAI basarsi su assunzioni dell'interno di altre classi, non imporre vincoli dall'esterno verso l'interno di altre parti, condividere frammenti delle stesse risorse/dati\\
-		
 		Accoppiamento necessario, se le parti non comunicano non è un sistema, ma da tenere basso\\
 		Metriche: M componenti, U grado di utilizzo reciproco\\
 		U minimo insieme vuoto, massimo M x M\\
@@ -774,33 +775,34 @@
 		Di tre tipi:\\
 		-top-down, stile funzionale, decomposizione dei problemi\\
 		-bottom-up, orientato agli oggetti, composizione e specializzazione\\
-		-meet-in-the-middle, intermedio, più usato\\
+		-meet-in-the-middle, intermedio, più usato, il problema viene scomposto ed analizzato, poi si costruisce per composizione e specializzazione\\
 		
 		\textbf{Framework}\\
-		Insieme integrato di componenti SW prefabbricate\\
+		Insieme integrato di componenti SW prefabbricate, librerie architetturali, architettura generica riusabile con buone proprietà\\
 		Definite ''librerie'' prima della programmazione ad oggetti\\
 		Sono bottom-up, perchè si usa codice già sviluppato (composizione e specializzazione), ma possono essere anche top-down se impongono uno stile architetturale (come scomporre il problema)\\
+		Utilizzano design pattern ricorrenti\\
 		
 		\textbf{Design pattern architetturali}\\
 		Soluzione progettuale a problema ricorrente, organizza una responsabilità architetturale lasciando alcune libertà\\
 		
 		\textbf{Pattern architetturali}\\
-		-Architettura three-tier, a livelli\\
-		GUI, logica operativa (business logic) e organizzazione dei dati (DBMS)\\
 		-Architettura multilivello\\
 		Come OSI e TPC/IP\\
+		-Architettura three-tier, a livelli\\
+		GUI, logica operativa (business logic) e organizzazione dei dati (DBMS)\\
 		-Architettura produttore-consumatore\\
 		Collaborazione su pipeline\\
 		
 		\textbf{Progettazione di dettaglio}\\
 		Attività:\\
-		-definizioni dei moduli/unità realizzative: realizzabili da un singolo programmatore, corrisponde a funzionalità o responsabilità ben definita\\
-		-Specifica delle unità come insieme di moduli: dipende dal linguaggio di programmazione, deve essere la minore entità strutturale utilmente rappresentabile\\
+		-definizioni dei moduli/\textbf{unità} realizzative: realizzabili da un singolo programmatore, corrisponde a funzionalità o responsabilità ben definita\\
+		-Specifica delle unità come insieme di \textbf{moduli}: dipende dal linguaggio di programmazione, deve essere la minore entità strutturale utilmente rappresentabile\\
 		-ex-novo oppure tramite specializzazioni di entità esistenti\\
 		Obbiettivi:\\
 		-Le unità dell'architettura di dettaglio realizzano le componenti dell'architettura logica\\
 		-Produrre la documentazione necessaria alla specifica i ogni unità\\
-		-Definire gli strumenti per le prove di unità\\
+		-Definire gli strumenti per le \textbf{prove di unità}\\
 		
 		\textbf{Documentazione, secondo IEEE 1016}\\
 		-Introduzione\\
@@ -811,10 +813,9 @@
 		-Descrizione della progettazione di dettaglio\\
 		
 		\textbf{Stati di progresso secondo SEMAT}\\
-		-Architecture selected: selezionata una architettura adatta e le tecnologie necessarie, decisi buy, build e make\\
-		-Demostrable: Dimostrazione delle principali caratteristiche, approvate da stakeholder, decisione interfacce e configurazione\\
-		-Usable: sistema utilizzabile e ha le caratteristiche desiderabili, funzionalita e prestazioni verificate e validate, quantità difetti residui accettabile\\
-		-Ready: documentazione utente pronta, gli stakeholder hanno accettato il prodotto
-		
+		-\textbf{Architecture selected}: selezionata una architettura adatta e le tecnologie necessarie, decisi buy, build e make\\
+		-\textbf{Demostrable}: Dimostrazione delle principali caratteristiche, decisione interfacce e configurazione\\
+		-\textbf{Usable}: sistema utilizzabile e ha le caratteristiche desiderabili, funzionalita e prestazioni verificate e validate, quantità difetti residui accettabile\\
+		-\textbf{Ready}: documentazione utente pronta, gli stakeholder hanno accettato il prodotto
 		
 \end{document}
