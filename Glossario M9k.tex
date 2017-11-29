@@ -989,4 +989,76 @@
 		4 - PC - Ho un piano e so prevedere l'avanzamento (misurabile), processo misurabile e controllabile, posso gestirlo quantitativamente\\
 		5 - PDCA - Ho un piano, so prevedere l'avanzamento e monitoro costantemente per migliorare, si punta al miglioramento\\
 		
+		
+		\clearpage
+		\section{Verifica e validazione}
+			\subsection{Introduzione}
+				\textbf{Verifica software}\\
+				Fornisce l'evidenza che l'output di una fase di sviluppo rispetta i requisiti\\
+				Si mira alla consistenza, completezza e correttezza del software ed alla documentazione di supporto\\
+				Supporta la validazione\\
+				
+				\textbf{Validazione software}\\
+				Conferma grazie a evidenze ed analisi che le specifiche software sono conformi a ai bisogni e che i requisiti sono stati soddisfatti\\
+				
+				\textbf{Analisi statica}\\
+				Non richiede esecuzione, essenziale finché il software non è completamente disponibile, studia il codice sorgente e la documentazione per verificare l'assenza di difetti, presenza di proprietà positive e il rispetto delle regole\\
+				
+				\textbf{Analisi dinamica}\\
+				Richiede l'esecuzione, avviene tramite test, usata nella verifica e nella validazione\\
+				Ripetibile, caratterizzata da:\\
+				-Ambiente (HW, stato iniziale, ...)\\
+				-Specifica (input richiesti, comportamenti attesi)\\
+				-Procedure (esecuzione, analisi dei risultati)\\
+				Strumenti:\\
+				-Driver: componente attiva fittizia per pilotare il test\\
+				-Stub: componente passiva fittizia per simulare una parte del sistema non oggetto del test\\
+				-Logget: componente non instrusivo di registrazione dei dati per l'analisi dei risultati\\
+				
+				%TODO GLOSSARIO
+				\textbf{Unità}\\
+				La più piccola parte software verificabile da sola, solitamente prodotta da un programmatore, in senso architetturale (package, classe, etc, non linee di codice)\\
+				
+				\textbf{Modulo}\\
+				Parte dell'unità, come inteso dal linguaggio di programmazione\\
+				
+				\textbf{Componente}\\
+				Integrazione di più unità\\
+				%TODO FINE GLOSSARIO
+				
+				\textbf{3 tipi di test + collaudo}\\
+				Di unità (per verificare la progettazione di dettaglio), di integrazione (per verificare la progettazione logica) e di sistema (per validare l'analisi) + collaudo\\
+				
+				\textbf{Test di unità - TU}
+				Analisi dinamica, con il supporto di analisi statica (analisi iterazioni, flussi, valori, variabili, etc)\\
+				Essendoci tante test di unità, conviene automatizzarli e parallelizzarli\\
+				Responsabilità dello stesso programmatore per unità semplici, di un verificatore indipendente altrimenti\\
+				Obbiettivo: verificare la correttezza del codice as implemented\\
+				
+				\textbf{Test di integrazione - TI}
+				Per costruzione e verifica incrementale del sistema\\
+				Rileva errori residui nei componenti, modifiche di interfacce o nei requisiti, riusco di componenti inadatti e integrazioni con altre applicazioni non ben conosciute\\
+				
+				\textbf{Test di sistema e collaudo}
+				\textbf{Validazione}: Test di sistema come attività interna del fornitore, per accertare la copertura dei requisiti\\
+				\textbf{Collaudo}: Attività supervisionata dal committente, per dimostrazione di conformità sulla basa dei casi di prova specificati o implicati dal contratto\\
+				Collaudo formale, segue il rilascio del prodotto, quindi ha implicazioni contrattuali\\
+				
+				\textbf{Test di regressione}
+				Comporta ripetizione di test già previsti ed effettuati per controllare che modifiche di una parte non abbiano influito sulle parti in relazione\\
+				Se aumenta l'accoppiamento o diminuisce l'incapsulazione aumenta la possibilità che succedano regressioni\\
+				
+				\textbf{Analisi statica}\\
+				%TODO 14/22
+				
+				\textbf{Walkthrough}\\
+				
+				\textbf{Inspection}\\
+				
+				\textbf{Attività di quality assurance}\\
+				
+				
+				
+				
+				
 \end{document}
