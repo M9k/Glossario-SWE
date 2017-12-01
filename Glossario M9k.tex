@@ -122,13 +122,13 @@
 		Soluzione progettuale a problema ricorrente, organizza una responsabilità architetturale lasciando alcune libertà\\
 		
 		\textbf{Unità}\\
-		?\\
+		La più piccola parte software verificabile da sola, solitamente prodotta da un programmatore, in senso architetturale (package, classe, etc, non linee di codice)\\
 		
-		\textbf{Moduli}\\
-		?\\
+		\textbf{Modulo}\\
+		Parte dell'unità, come inteso dal linguaggio di programmazione\\
 		
-		\textbf{Prove di unità}\\
-		?\\
+		\textbf{Componente}\\
+		Integrazione di più unità\\
 		
 		\textbf{Qualità - secondo ISO 8402 e ISO 9000}\\
 		Insieme delle caratteristiche di una entità che ne determinano la capacità di soddisfare esigenze espresse ed implicite, deve essere quantificabile per permettere paragoni oggettivi\\
@@ -1015,9 +1015,8 @@
 				Strumenti:\\
 				-Driver: componente attiva fittizia per pilotare il test\\
 				-Stub: componente passiva fittizia per simulare una parte del sistema non oggetto del test\\
-				-Logget: componente non instrusivo di registrazione dei dati per l'analisi dei risultati\\
+				-Logger: componente non instrusivo di registrazione dei dati per l'analisi dei risultati\\
 				
-				%TODO GLOSSARIO
 				\textbf{Unità}\\
 				La più piccola parte software verificabile da sola, solitamente prodotta da un programmatore, in senso architetturale (package, classe, etc, non linee di codice)\\
 				
@@ -1026,9 +1025,11 @@
 				
 				\textbf{Componente}\\
 				Integrazione di più unità\\
-				%TODO FINE GLOSSARIO
 				
-				\textbf{3 tipi di test + collaudo}\\
+				\textbf{Integrazione o Build}\\
+				continua ed automatizzata, non a mano, verificando automaticamente i test\\
+				
+				\textbf{3 tipi di test + collaudo + test di regressione}\\
 				Di unità (per verificare la progettazione di dettaglio), di integrazione (per verificare la progettazione logica) e di sistema (per validare l'analisi) + collaudo\\
 				
 				\textbf{Test di unità - TU}
@@ -1065,16 +1066,16 @@
 				
 				\textbf{Inspection - metodo di lettura}\\
 				Eseguire una lettura mirata, verificatori separati dai programmatori, si focalizza su presupposti ed error guessing\\
-				Più rapido, meno collaborativo\\
+				Più rapido, meno collaborativo, migliore ma necessita di una checklist\\
 				Fasi, ognuna documentata:\\
 				-Pianificazione\\
-				-*Definizione \textit{lista di controllo}\\
+				-*Definizione \textit{lista di controllo} o checklist\\
 				-Lettura\\
-				-Discussione\\
 				-Correzione di difetti\\
+				NO discussione, perché grazie alla scaletta so già se qualcosa è errato\\
 				
 				\textbf{Quality assurance}\\
-				Raccolta tempestiva e oggettiva di qualità per controllo interno ed accertamento esterno\\
+				Proattiva, agendo sul way of working, con raccolta tempestiva e oggettiva di qualità per controllo interno ed accertamento esterno\\
 				Standard di riferimento ISO 9126, specifica requisiti, obbiettivi e metriche\\
 				
 \end{document}
