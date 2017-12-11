@@ -1078,4 +1078,42 @@
 				Proattiva, agendo sul way of working, con raccolta tempestiva e oggettiva di qualità per controllo interno ed accertamento esterno\\
 				Standard di riferimento ISO 9126, specifica requisiti, obbiettivi e metriche\\
 				
+			\subsection{Analisi statica}
+				\textbf{Programmazione}\\
+				Un software deve avere capacità funzionali e non funzionali che garantiscono che lavori correttamente.\\
+				Proprietà da verificare: di costruzione (architettura, codifica, integrazione), d'uso, di funzionamento\\
+				La programmazione non deve ostacolare la verifica ma agevolarla\\
+				Un fix costa meno se fatto prima, più tardi si va, più costa\\
+				Il programma deve essere \textbf{corretto per costruzione}, non per correzione\\
+				
+				\textbf{Come evitare comportamento non predicibile}\\
+				-Niente effetti laterali, quindi evitare variabili globali\\
+				-Attenzione all'ordine di elaborazione e inizializzazione\\
+				-Scelta del tipo di passaggio di parametri\\
+				
+				\textbf{Criteri di programmazione da seguire}\\
+				-Riflettere l'architettura nel codice, usando moduli e unità\\
+				-Separare l'interfaccia dell'implementazione, favorisce information hiding\\
+				-Massimizzare l'informazione\\
+				-Usare tipi specializzati per i dati, aumenta il potere espressivo del sistema\\
+				-Evitare race condition, stessi input = stessi output\\
+				
+				
+				\textbf{Come facilitare la verifica}\\
+				-Usare un unico pre e un unico post\\
+				-avere un punto di entrata e UNO di uscita, no return multipli\\
+				-un singolo contesto per procedura\\
+				-procedure brevi\\
+				-scope limitato, evito variabili globali\\
+				-maggiore potenza espressiva (maggiore astrazione) aumenta la quantità di codice eseguito realmente, più difficile dimostrare una corrispondenza tra il codice e il requisito che soddisfa\\
+				
+				\textbf{Tipi di analisi statica}
+				-Flusso di controllo, mi accerto che sia ben strutturato, non ci sia codice irraggiungibile o loop infiniti\\
+				-Flusso di dati, controllo i segmenti e la dimensione dei dati in essi contenuti, evito di usare variabili non assegnate o variabili mai lette, evito \textbf{aliasing}, cioè condivisione dello stesso dato a due procedure\\
+				-Flusso d'informazione, determino le dipendenze tra ingressi e uscite, l'output è in funzione dei dati di input, determino quella funzione e verifico corrisponda al codice\\
+				-Esecuzione simbolica, eseguo a mano\\
+				-Verifica formale del codice, con pre e post e verifico la specifica algebrica del codice\\
+				-Etc..\\
+				
+				
 \end{document}
