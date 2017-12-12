@@ -1098,7 +1098,6 @@
 				-Usare tipi specializzati per i dati, aumenta il potere espressivo del sistema\\
 				-Evitare race condition, stessi input = stessi output\\
 				
-				
 				\textbf{Come facilitare la verifica}\\
 				-Usare un unico pre e un unico post\\
 				-avere un punto di entrata e UNO di uscita, no return multipli\\
@@ -1114,6 +1113,33 @@
 				-Esecuzione simbolica, eseguo a mano\\
 				-Verifica formale del codice, con pre e post e verifico la specifica algebrica del codice\\
 				-Etc..\\
+				
+				\subsection{Analisi dinamica}
+				\textbf{Test}\\
+				Verifica del comportamento su un insieme finito di casi del dominio\\
+				L'esito deve essere decidibile e confrontabile con il comportamento atteso\\
+				Produce una misura della qualità del sistema\\
+				Non deve iniziare dopo la codifica, si deve scrivere il sistema tenendo a mente che si dovrà sottoporlo a test\\
+				
+				\textbf{Failure}\\
+				Quando il comportamento del sistema devia da quello specificato, errori interni al sistema (hardware o software)\\
+				Causati da errori di tipo meccanici, algoritmici o concettuali\\
+				Errori = stato del sistema, Faults = quello che fa esistere l'errore\\
+				un Fault porta il sistema in uno stato di Error che genera un Failure\\
+				
+				\textbf{Quantità dei test}\\
+				Sufficienti da fornire certezze di adeguatezza sulla qualità\\
+				Usare la quantità massima di sforzo, tempo e risorse disponibile per la verifica\\
+				
+				\textbf{Cosa testare}\\
+				-Il sistema nel suo complesso (Test di sistema, TS)\\
+				-Parte di esso, cioè più unità in relazione (Test di integrazione, TI)\\
+				-Singole unità (Test di unità, TU)\\
+				-DA EVITARE: Re-test di parti perché dipendono da una parte modificata (Test di regressione, TR)\\
+				
+				\textbf{Obbiettivo della prova}\\
+				%TODO, pag 8/38
+				
 				
 				
 \end{document}
