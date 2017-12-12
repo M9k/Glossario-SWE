@@ -1138,8 +1138,51 @@
 				-DA EVITARE: Re-test di parti perché dipendono da una parte modificata (Test di regressione, TR)\\
 				
 				\textbf{Obbiettivo della prova}\\
-				%TODO, pag 8/38
+				da specificare per OGNI caso di prova, preciso e quantitativo\\
+				Il piano di qualità indica \textit{quali e quante} prove\\
+				Prova: il processo di eseguire un programma con l'intento di trovare difetti\\
+				La progettazione deve assicurare la possibilità di effettuare test, se troppo complessa è difficile da provare\\
+				Prova ripetibile, niente variazioni tra le prove, no race condition, no variabili globali, no side effect\\
+				Determina se ci sono guasti, non può determinare che non ci siano\\
 				
+				%TODO limiti e problemi?
+				
+				\textbf{elementi}\\
+				-Caso di prova, test case: ingresso, uscita, oggetto di prova, ambiente\\
+				-Batteria di prova, test suite: sequenza di casi di prova\\
+				-Procedura di prova: procedimento automatico per eseguire le prove e analizzare/registrare i risultati\\
+				-Prova: batteria + procedura\\
+				-L'oracolo: verificare i risultati ottenuti con i risultati attesi che si sanno essere corretti, per velocizzare e rendere oggettiva la convalida\\
+				Oracoli creati con prove semplici, usando componenti di terze parti indipendenti o sulla base di specifiche funzionali.\\
+				
+				%TODO Classi di equivalenza?
+				
+				\textbf{Test di unità}\\
+				Unità = uno o più moduli, modulo = componente elementare, definite nella progettazione di dettaglio\\
+				TU completa quando sono state verificate tutte le unità\\
+				-Test funzionare = black box: va integrato con un test strutturale, fa riferimento solo a input e output\\
+				-Test strutturale: verifica la logica interna del codice, cercando massima copertura, controlla il cammino di esecuzione\\
+				
+				\textbf{Copertura}\\
+				-Statement Coverage: la parte di comandi coperti dai test\\
+				-Branch Coverage: la parte di flussi di controlli attraversati dai test almeno una volta\\
+				Devo puntare ad averli entrambi al 100\%, percorrendo qualsiasi combinazione possibile di cammini\\
+				
+				Se ho due if di seguito mi servono almeno 2 test per avere uno statement coverage al 100\%, ma ne servono almeno 4 per avere un branch coverage del 100\%\\
+				
+				Condizione = bool, true o false\\
+				Decisione = espressione contenente operatori booleani\\
+				
+				\textbf{Test di integrazione}\\
+				%TODO pag 26/38
+				
+				\textbf{Test di regressione}\\
+				
+				
+				\textbf{Test di accettazione/collaudo}\\
+				
+				
+				\textbf{Test di sistema}\\
 				
 				
 \end{document}
