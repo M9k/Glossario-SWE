@@ -1174,15 +1174,41 @@
 				Decisione = espressione contenente operatori booleani\\
 				
 				\textbf{Test di integrazione}\\
-				%TODO pag 26/38
+				Corrisponde a verificare la progettazione architetturale\\
+				%TODO logica di integrazione funzionale?
+				Si integrano prima le componenti con meno dipendenze\\
+				Assemblare le parti in modo incrementale, aggiungendo a sistemi ben verificati, in modo che gli errori siano probabilmente sulla parte che si sta verificando\\
+				Assemblare prima i produttori, poi i consumatori, altrimenti non ho la certezza di avere input corretti\\
+				Assemblare in modo che i passi di integrazione siano reversibili, in modo da poter retrocedere se qualcosa va male\\
+				Se ci sono problemi, sono difetti di progettazione o difetti di unità, quindi i test di unità non sono stati sufficienti\\
+				I test devono essere abbastanza per accertare che \textbf{tutti i dati scambiati siano conformi alla loro specifica} e \textbf{che tutti i flussi di controllo previsti siano effettivamente provati}\\
 				
-				\textbf{Test di regressione}\\
-				
-				
-				\textbf{Test di accettazione/collaudo}\\
-				
+				\textbf{Metodi di testi di integrazione}\\
+				-Bottom-up: prima le parti con minore dipendenza funzionale e maggiore utilità, questo riduce il numero di stub necessari al test ma ritarda la disponibilità di funzionalità di alto livello\\
+				-Top-down: Prima si sviluppano le parti poste sulle foglie più esterne, poi si scende, molti stub ma integra a partire dall'alto\\
 				
 				\textbf{Test di sistema}\\
+				Verifica il comportamento dinamico del sistema completo\\
+				Dopo tutti i test di integrazione\\
+				è inerentemente funzionale (black-box), non conosce l'implementazione del SW che utilizza\\
 				
+				\textbf{Test di regressione}\\
+				Ripetizione selettiva di TU, TI e TS, per accertare che modifiche non abbiano introdotto errori altrove\\
+				Decisi nel momento che si approva una modifica SW\\
 				
+				\textbf{Test di accettazione/collaudo}\\
+				Accerta il soddisfacimento dei requisiti utente\\
+				
+				%TODO fattore di copertura?
+				
+				\textbf{Maturità di prodotto}\\
+				Valutare il grado di evoluzione del prodotto, secondo:\\
+				-Quanto il prodotto migliora in seguito alle prove\\
+				-Quanto diminuisce la densità dei difetti\\
+				-Quanto può costare la scoperta del prossimo difetto\\
+				Tecniche empiriche, influenzate dal code-and-fix\\
+				Modello ideale:\\
+				-Modello base: un numero di difetti SW è una costante iniziale\\
+				-Modello logaritmico: le modifiche introducono difetti\\
+
 \end{document}
