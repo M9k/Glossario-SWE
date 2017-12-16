@@ -1123,9 +1123,10 @@
 				
 				\textbf{Failure}\\
 				Quando il comportamento del sistema devia da quello specificato, errori interni al sistema (hardware o software)\\
-				Causati da errori di tipo meccanici, algoritmici o concettuali\\
-				Errori = stato del sistema, Faults = quello che fa esistere l'errore\\
+				Causati da errori, Fault, di tipo meccanici, algoritmici o concettuali\\
+				Errori = stato del sistema\\
 				un Fault porta il sistema in uno stato di Error che genera un Failure\\
+				Se un componente ha un fault e generare un failure, le parti che usano quel componente avranno un fault\\
 				
 				\textbf{Quantità dei test}\\
 				Sufficienti da fornire certezze di adeguatezza sulla qualità\\
@@ -1136,6 +1137,7 @@
 				-Parte di esso, cioè più unità in relazione (Test di integrazione, TI)\\
 				-Singole unità (Test di unità, TU)\\
 				-DA EVITARE: Re-test di parti perché dipendono da una parte modificata (Test di regressione, TR)\\
+				Si testa dal piccolo al grande per poter isolare con più facilità i problemi\\
 				
 				\textbf{Obbiettivo della prova}\\
 				da specificare per OGNI caso di prova, preciso e quantitativo\\
@@ -1145,9 +1147,14 @@
 				Prova ripetibile, niente variazioni tra le prove, no race condition, no variabili globali, no side effect\\
 				Determina se ci sono guasti, non può determinare che non ci siano\\
 				
-				%TODO limiti e problemi?
+				\textbf{Valori da utilizzare nei test}\\
+				-Valori illegali superiori\\
+				-Valori illegali inferiori\\
+				-Valori legali\\
+				-Valori di limite superiore\\
+				-Valore di limite inferiori\\
 				
-				\textbf{elementi}\\
+				\textbf{Elementi}\\
 				-Caso di prova, test case: ingresso, uscita, oggetto di prova, ambiente\\
 				-Batteria di prova, test suite: sequenza di casi di prova\\
 				-Procedura di prova: procedimento automatico per eseguire le prove e analizzare/registrare i risultati\\
@@ -1155,15 +1162,14 @@
 				-L'oracolo: verificare i risultati ottenuti con i risultati attesi che si sanno essere corretti, per velocizzare e rendere oggettiva la convalida\\
 				Oracoli creati con prove semplici, usando componenti di terze parti indipendenti o sulla base di specifiche funzionali.\\
 				
-				%TODO Classi di equivalenza?
-				
 				\textbf{Test di unità}\\
 				Unità = uno o più moduli, modulo = componente elementare, definite nella progettazione di dettaglio\\
 				TU completa quando sono state verificate tutte le unità\\
 				-Test funzionare = black box: va integrato con un test strutturale, fa riferimento solo a input e output\\
 				-Test strutturale: verifica la logica interna del codice, cercando massima copertura, controlla il cammino di esecuzione\\
 				
-				\textbf{Copertura}\\
+				\textbf{Copertura - per test strutturale}\\
+				I test strutturali sono white box, al contrario di quelli funzionali che sono black box\\
 				-Statement Coverage: la parte di comandi coperti dai test\\
 				-Branch Coverage: la parte di flussi di controlli attraversati dai test almeno una volta\\
 				Devo puntare ad averli entrambi al 100\%, percorrendo qualsiasi combinazione possibile di cammini\\
@@ -1172,10 +1178,11 @@
 				
 				Condizione = bool, true o false\\
 				Decisione = espressione contenente operatori booleani\\
+				Evito decisione complessa o il numero di test per una buona copertura sale di molto\\
+				Per lo stesso motivo evito molti parametri ed il numero di branch/cammini\\
 				
 				\textbf{Test di integrazione}\\
 				Corrisponde a verificare la progettazione architetturale\\
-				%TODO logica di integrazione funzionale?
 				Si integrano prima le componenti con meno dipendenze\\
 				Assemblare le parti in modo incrementale, aggiungendo a sistemi ben verificati, in modo che gli errori siano probabilmente sulla parte che si sta verificando\\
 				Assemblare prima i produttori, poi i consumatori, altrimenti non ho la certezza di avere input corretti\\
@@ -1199,8 +1206,6 @@
 				\textbf{Test di accettazione/collaudo}\\
 				Accerta il soddisfacimento dei requisiti utente\\
 				
-				%TODO fattore di copertura?
-				
 				\textbf{Maturità di prodotto}\\
 				Valutare il grado di evoluzione del prodotto, secondo:\\
 				-Quanto il prodotto migliora in seguito alle prove\\
@@ -1209,6 +1214,6 @@
 				Tecniche empiriche, influenzate dal code-and-fix\\
 				Modello ideale:\\
 				-Modello base: un numero di difetti SW è una costante iniziale\\
-				-Modello logaritmico: le modifiche introducono difetti\\
+				-Modello logaritmico: le modifiche introducono difetti
 
 \end{document}
